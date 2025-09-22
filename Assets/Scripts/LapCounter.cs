@@ -10,6 +10,8 @@ public class LapCounter : MonoBehaviour
     public bool isPlayer = false;
     public TMP_Text lapText;
     public TMP_Text raceTimerText;
+    public TMP_Text winText;
+    private float totalTime = 0f;
     private float raceTime = 0f;
     private float lapStartTime = 0f;
 
@@ -23,6 +25,7 @@ public class LapCounter : MonoBehaviour
     {
         if (isPlayer)
         {
+            totalTime = Time.time;
             raceTime = Time.time - lapStartTime;
             if (raceTimerText != null)
             {
@@ -65,6 +68,7 @@ public class LapCounter : MonoBehaviour
                     if (isPlayer)
                     {
                         Debug.Log("You win!");
+                        winText.text = "You win! " + totalTime;
                     }
                     else
                     {

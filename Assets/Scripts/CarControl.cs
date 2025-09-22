@@ -98,9 +98,21 @@ public class CarControl : MonoBehaviour
 
     void Move()
     {
-        foreach (var wheel in wheels)
+        if (moveInput > 0)
         {
-            wheel.wheelCollider.motorTorque = moveInput * 600 * maxAcceleration * Time.deltaTime;
+            foreach (var wheel in wheels)
+            {
+                wheel.wheelCollider.motorTorque = moveInput * 600 * maxAcceleration * Time.deltaTime;
+                //Debug.Log("forv -> " + wheel.wheelCollider.motorTorque);
+            }
+        }
+        else if (brakeInput >= 0 && moveInput == 0)
+        {
+            foreach (var wheel in wheels)
+            {
+                wheel.wheelCollider.motorTorque = -brakeInput * 600 * maxAcceleration * Time.deltaTime;
+                //Debug.Log("<- back " + wheel.wheelCollider.motorTorque);
+            }
         }
     }
 
@@ -118,11 +130,12 @@ public class CarControl : MonoBehaviour
 
     void Brake()
     {
-        if (brakeInput == 1 || moveInput == 0)
+        if (brakeInput < 1 && moveInput == 0 || brakeInput == 1 && moveInput == 1)
         {
             foreach (var wheel in wheels)
             {
                 wheel.wheelCollider.brakeTorque = 300 * brakeAcceleration * Time.deltaTime;
+                //Debug.Log("stop");
             }
 
             //carLights.isBackLightOn = true;

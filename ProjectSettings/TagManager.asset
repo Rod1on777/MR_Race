@@ -22,6 +22,7 @@ TagManager:
   - QDSUITextSecondaryInvertedColor
   - FinishLine
   - Checkpoint
+  - OffRaceTrack
   layers:
   - Default
   - TransparentFX
