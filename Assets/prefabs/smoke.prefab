@@ -169,8 +169,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 3
+      scalar: 0.5
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.6
+      value: 0.1
       mode: 0
       spread: 0
       speed:
@@ -986,8 +986,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.014167786
-          value: 0.56923103
+          time: 0
+          value: 0.030771255
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -995,8 +995,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9971924
-          value: 1
+          time: 1
+          value: 0.07692337
           inSlope: -0.39483657
           outSlope: -0.39483657
           tangentMode: 0
