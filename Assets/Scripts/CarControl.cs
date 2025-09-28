@@ -95,14 +95,14 @@ public class CarControl : MonoBehaviour
         //steerInput = Input.GetAxis("Horizontal");
         //steerInput = controls.axis.Steer.ReadValue<float>();
 
-        Vector2 steerInputControl = controls.axis.Steer.ReadValue<Vector2>();
-        steerInput = steerInputControl.x;
+        //Vector2 steerInputControl = controls.axis.Steer.ReadValue<Vector2>();
+        //steerInput = steerInputControl.x;
 
-        //steerInput = targetObject.rotation.eulerAngles.z;
-        //if (steerInput > 180)
-        //{
-        //    steerInput = steerInput - 360;
-        //}
+        steerInput = targetObject.rotation.eulerAngles.z;
+        if (steerInput > 180)
+        {
+            steerInput = steerInput - 360;
+        }
 
         //float gasValue = gasAction.ReadValue<float>();
         //steerInput = steerInputControl.x;
