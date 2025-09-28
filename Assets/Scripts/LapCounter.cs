@@ -68,7 +68,7 @@ public class LapCounter : MonoBehaviour
                     if (isPlayer)
                     {
                         Debug.Log("You win!");
-                        winText.text = "You win! " + totalTime;
+                        winText.text = "You win! " + totalTime + " Now you can drive freely.";
                     }
                     else
                     {

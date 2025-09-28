@@ -1008,7 +1008,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0f612f4d-e58f-413b-9ef2-be3f1062258f"",
-                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
+                    ""path"": ""<XRController>{RightHand}/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1030,7 +1030,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5c4043d4-8697-4cf9-973f-2fc543081190"",
-                    ""path"": ""<XRController>{RightHand}/gripPressed"",
+                    ""path"": ""<XRController>{RightHand}/grip"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

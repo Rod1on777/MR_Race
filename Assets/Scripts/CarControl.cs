@@ -32,6 +32,7 @@ public class CarControl : MonoBehaviour
 
     //-0.02 for VR
     public float turnSensitivity = 1.0f;
+    public float steerAngle = 30.0f;
     public float maxSteerAngle = 30.0f;
 
     public float brakeTorque = 0.0f;
@@ -139,7 +140,15 @@ public class CarControl : MonoBehaviour
         {
             if (wheel.axel == Axel.Front)
             {
-                var _steerAngle = steerInput * turnSensitivity * maxSteerAngle;
+                var _steerAngle = steerInput * turnSensitivity * steerAngle;
+                if (_steerAngle > maxSteerAngle)
+                {
+                    _steerAngle = maxSteerAngle;
+                }
+                if (_steerAngle < -maxSteerAngle)
+                {
+                    _steerAngle = -maxSteerAngle;
+                }
                 wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, _steerAngle, 0.6f);
             }
         }

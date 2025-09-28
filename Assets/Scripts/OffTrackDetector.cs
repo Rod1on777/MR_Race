@@ -21,7 +21,7 @@ public class OffTrackDetector : MonoBehaviour
             onTrack = true;
         }
     }
-    private void ReturnToTrack()
+    public void ReturnToTrack()
     {
         Debug.Log(gameObject.name + " respawned");
 
